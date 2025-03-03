@@ -6,6 +6,8 @@
 #include <time.h>
 #include <stdlib.h>
 
+void welcomeScreen();
+
 int main(){
 
     welcomeScreen();
@@ -14,7 +16,7 @@ int main(){
 }
 
 void welcomeScreen(){
-    printf("\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n");
-    printf("Hello, Welcome to the Center for Kids Who want to learn to read good but cant read good!");
-    printf("\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n");
+    printf("\n\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n");
+    printf("Hello, Welcome to the Center for Kids Who Want to Learn to Read Good But Cant!");
+    printf("\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n ");
 }
