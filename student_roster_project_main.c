@@ -12,7 +12,7 @@ int main()
     {
 
         welcomeScreen();
-
+        viewOptions();
         return 0;
     }
 
@@ -27,56 +27,49 @@ void welcomeScreen()
 
 void viewOptions()
     {
-    //print user menu choices in a do while loop
+      //print user menu choices in a do while loop
+      int choice;
+      int validChoice = 0;
 
+      do
+      {
+         printf("\nStudent Roster Menu\n");
+         printf("1. Add Student\n");
+         printf("2. Display Students\n");
+         printf("3. Delete Student\n");
+         printf("4. Exit\n");
 
-    }
+         printf("Enter your choice: ");
+         scanf("%d", &choice);
 
-    
- int add_or_remove_student(int action, char fname[], char lname[])
- {
-    //action variable. value of 1 adds, value of 0 removes.
+         switch (choice) 
+         {
+               case 1:
+                  //addStudent();
+                  printf("ADD STUDENT SELECTED");
+                  break;
 
-    //requires first and last name
-    // concatenates the name so there is a return variable of full name.
+               case 2:
+                  // displayStudents();
+                  printf("display STUDENTs SELECTED");
+                  break;
 
-    //if action == 1, return concatenated string value of the full name
+               case 3:
+                  //deleteStudent();
+                  printf("REMOVE STUDENT SELECTED");
+                  break;
 
-    //if action == 0, call the add/remove student function to remove the student from the roster
+               case 4:
+                  printf("Exiting the program.\n");
+                  break;
 
+               default:
+                  printf("Invalid choice. Please try again.\n");
+                  validChoice = 1;      
+         } 
+      } while (choice != 4 || validChoice != 0);
 
- }
+      printf("THIS IS THE OUTSIDE OF THE LOOP");
 
- int generate_random_id(){
-
-   
- }
-
- int remove_student_from_roster()
- {
-    //delete student from student roster
-
- }
-
-
- void student_gpa_scores(){
-    //a collection of student test scores
- }
-
- void add_or_remove_gpa(int gpa_value, char fullname[]){
-    //add or remove gpa to the gpa roster
- }
-
- int main(){
-
-   // memory_addressing();
-
-    //pointers_practice();
-
-    //student_gpa_scores();
-
-    student_list("Jericho Bunker");
-
-
-    return 0;
- }
+      return 0;
+   }
